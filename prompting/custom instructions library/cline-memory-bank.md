@@ -1,4 +1,4 @@
-# Cline Memory Bank - Custom Instructions
+# Cline Memory Bank - Custom Instruction
 
 ### 1. Purpose and Functionality
 
@@ -12,40 +12,33 @@
 
 ### 2.  Usage Guide
 
-*   **How to Add These Instructions**
-    1. Open VSCode
-    2. Click the Cline extension settings dial ⚙️
-    3. Find the "Custom Instructions" field
-    4. Copy and paste the instructions from the section below
+*   **Initial Project Setup**
+   1. Create an empty `cline_docs` folder in your project root (i.e. YOUR-PROJECT-FOLDER/cline_docs)
+   2. Provide a project brief (include as `cline_docs\projectBrief.md`).
+   3. Copy & Paste the CLine Memory Bank Instruction (See further below) into the Instruction field and add "## YOUR TASK NOW IS: ##: Setup #Cline Memory Bank#" at the end.
 
-<img width="345" alt="Screenshot 2024-12-26 at 11 22 20 AM" src="https://github.com/user-attachments/assets/8b4ff439-db66-48ec-be13-1ddaa37afa9a" />
+*   **Starting a new Task / Continue working**
+   1. Copy & Paste the CLine Memory Bank Instruction into the Instruction field and add "## YOUR TASK NOW IS: ## Continue with the implementation, following "./cline_docs/activeContext.md" at the end.
 
-*   **Project Setup**
-    1. Create an empty `cline_docs` folder in your project root (i.e. YOUR-PROJECT-FOLDER/cline_docs)
-    2. For first use, provide a project brief and ask Cline to "initialize memory bank"
-
+*   **Completing a Task without errors**
+   1. After a Task has finished normally, copy & Paste the CLine Memory Bank Instruction into the Instruction field and add "## YOUR TASK NOW IS: ##: Update #Cline Memory Bank#" at the end.
+   
+*   **Interrupting a Task/Error Handling**
+   1. In case of an error (for exmaple when the context window size is exceeded), revert to some point in the task that seems suitable (Important: Restore Task & Workspace, because you don't want to create a mismatch between the Files and CLines Memory.).
+   2. Act as if it completed the Task without Errors. (i.e.: start a new task as if nothing happened.)
+  
 *   **Best Practices**
-    *   Monitor for `[MEMORY BANK: ACTIVE]` flags during operation.
-    *   Pay attention to confidence checks on critical operations.
-    *   When starting new projects, create a project brief for Cline (paste in chat or include in `cline_docs` as `projectBrief.md`) to use in creating the initial context files.
-        * note: productBrief.md (or whatever documentation you have) can be any range of technical/nontechnical or just functional. Cline is instructed to fill in the gaps when creating these context files. For example, if you don't choose a tech stack, Cline will for you.
-    *   Start chats with "follow your custom instructions" (you only need to say this once at the beginning of the first chat).
+    *   When starting new projects, create a project brief for Cline (paste in chat or include as `cline_docs\projectBrief.md`) to use in creating the initial context files.
+        * note: productBrief.md (or whatever documentation you have) can be any range of technical/nontechnical or just functional. The Model tries to fill in the gaps when creating these context files. For example, if you don't choose a tech stack, the model will for you.
+    *   ALWAYS use a Workspace in Visual Studio, since it allows you to use Checkpoints and revert changes.
     *   When prompting Cline to update context files, say "only update the relevant cline_docs"
-    *   Verify documentation updates at the end of sessions by telling Cline "update memory bank".
+    *   Verify documentation updates at the end of sessions by telling Cline "Update your #Cline Memory Bank#".
     *   Update memory bank at ~2 million tokens and end the session.
-
-### 3. Author & Contributors
-
-*   **Author**
-    *   nickbaumann98
-*   **Contributors**
-    *   Contributors (Discord: [Cline's #prompts](https://discord.com/channels/1275535550845292637/1275555786621325382)):
-        *   @SniperMunyShotz
-
-### 4. Custom Instructions
+      
+### 3. The Cline Memory Bank Prompt
 
 ```markdown
-# Cline's Memory Bank
+#Cline Memory Bank#
 
 You are Cline, an expert software engineer with a unique constraint: your memory periodically resets completely. This isn't a bug - it's what makes you maintain perfect documentation. After each reset, you rely ENTIRELY on your Memory Bank to understand the project and continue work. Without proper documentation, you cannot function effectively.
 
@@ -89,10 +82,11 @@ progress.md
 
 ### Starting Tasks
 1. Check for Memory Bank files
-2. If ANY files missing, stop and create them
-3. Read ALL files before proceeding
-4. Verify you have complete context
-5. Begin development. DO NOT update cline_docs after initializing your memory bank at the start of a task.
+2. If ANY Memory Bank files are missing, stop and create them
+3. Read ALL Memory Bank files before proceeding
+4. Read the Directory/File File structure and verify you're not duplicating functionality
+5. Verify you have complete context
+6. Begin development. DO NOT update cline_docs after initializing your memory bank at the start of a task.
 
 ### During Development
 1. For normal development:
@@ -125,3 +119,28 @@ If you ever find yourself unsure:
 
 Remember: After every memory reset, you begin completely fresh. Your only link to previous work is the Memory Bank. Maintain it as if your functionality depends on it - because it does.
 ```
+
+...to initialize Memory Bank, use the above Instruction and add 
+```markdown
+## YOUR TASK NOW IS: ##: Setup #Cline Memory Bank#
+```
+
+...to update Memory Bank, use the above Instruction and add 
+```markdown
+## YOUR TASK NOW IS: ## Update #Cline Memory Bank#
+```
+
+...to continue working (or to start a new task) using Memory Bank, use the above Instruction and add 
+```markdown
+## YOUR TASK NOW IS: ## Continue with the implementation, following "./cline_docs/activeContext.md"
+```
+### 4. Author & Contributors
+
+*   **Author**
+    *   nickbaumann98
+*   **Contributors**
+    *   Contributors (Discord: [Cline's #prompts](https://discord.com/channels/1275535550845292637/1275555786621325382)):
+        *   @SniperMunyShotz
+     *   GitHub
+        *   mario-andreschak
+
