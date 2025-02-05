@@ -25,7 +25,7 @@
    
 *   **Interrupting a Task/Error Handling**
    1. In case of an error (for exmaple when the context window size is exceeded), revert to some point in the task that seems suitable (Important: Restore Task & Workspace, because you don't want to create a mismatch between the Files and CLines Memory.).
-   2. Act as if it completed the Task without Errors. (i.e.: start a new task as if nothing happened.)
+   2. Act as if it completed the Task without Errors. (i.e.: update the Memory Bank now, and start a new task as if nothing happened.)
   
 *   **Best Practices**
     *   When starting new projects, create a project brief for Cline (paste in chat or include as `cline_docs\projectBrief.md`) to use in creating the initial context files.
