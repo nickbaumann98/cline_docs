@@ -1,3 +1,6 @@
+# Note: These docs are no longer maintained. Please refer to https://docs.cline.bot for the most recent Cline documentation.
+---
+
 # Cline Documentation
 
 Welcome to the Cline documentation - your comprehensive guide to using and extending Cline's capabilities. Here you'll find resources to help you get started, improve your skills, and contribute to the project.
