@@ -1,4 +1,4 @@
-# Note: These docs are no longer maintained. Please refer to https://docs.cline.bot/improving-your-prompting-skills/cline-memory-bank for the most recent version of Cline Memory Bank.
+# Note: These docs are no longer maintained. Please refer to https://docs.cline.bot/improving-your-prompting-skills/cline-ai_docs/memory-bank for the most recent version of Cline Memory Bank.
 ---
 # Cline Memory Bank
 
@@ -88,7 +88,7 @@ flowchart TD
    - Known issues
 
 ### Additional Context
-Create additional files/folders within memory-bank/ when they help organize:
+Create additional files/folders within ai_docs/memory-bank/ when they help organize:
 - Complex feature documentation
 - Integration specifications
 - API documentation
@@ -188,7 +188,7 @@ REMEMBER: After every memory reset, I begin completely fresh. The Memory Bank is
 
 #### First Time Setup
 
-1. Create a `memory-bank/` folder in your project root
+1. Create a `ai_docs/memory-bank/` folder in your project root
 2. Have a project brief ready (can be technical or non-technical)
 3. Ask Cline to "initialize memory bank"
 
